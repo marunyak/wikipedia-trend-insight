@@ -1,0 +1,14 @@
+DejaVu Sans (Regular, Bold, Oblique) is bundled in this directory so the PDF
+report can render any language the agent is asked about — article titles
+with Polish/Czech/etc. diacritics, and user-question text in Cyrillic,
+Greek, Vietnamese, and more — without hitting pdf-lib's standard-14-font
+limitation (WinAnsi encoding only covers a narrow Western European subset;
+see references/api-notes.md for the bug this fixes and why a bundled font
+was the right call vs. alternatives).
+
+DejaVu fonts are released under a free, permissive license derived from the
+Bitstream Vera license, with no restriction on redistribution or embedding.
+Full license text: https://dejavu-fonts.github.io/License.html
+
+Source: https://dejavu-fonts.github.io/ (also commonly present as a system
+font on Linux, e.g. /usr/share/fonts/truetype/dejavu/).

@@ -1,0 +1,32 @@
+{
+  "name": "wikipedia-trend-insight",
+  "version": "1.0.0",
+  "description": "Agent Skill: Wikipedia pageview trend analysis and one-page PDF reports for B2C product decisions.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "analyze": "tsx src/analyzeTopic.ts",
+    "resolve-titles": "tsx src/resolveTitles.ts",
+    "test": "tsx tests/offline.test.ts",
+    "eval:model": "node tests/model-eval.mjs",
+    "build": "tsc -p tsconfig.json",
+    "build:test": "tsc -p tsconfig.tests.json && node dist-test/tests/offline.test.js"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "@pdf-lib/fontkit": "^1.1.1"
+  },
+  "files": [
+    "dist",
+    "assets",
+    "SKILL.md",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  }
+}
